@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font: 14px/1 "微软雅黑";
+    color: #474747;
+    touch-action: none;
+}
+
+/* 根据该元素本身的字体大小 设置行高 字体是14px line-height:1; 的行高就是14px */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/* font-size:百分比(相对于父元素字号计算) */
+
+/* 假如你设置body{font-size:12px;}
+但h1是不会继承这个12px，它会按照一定百分比增加字号，但如果给h1显试指定font-
+size:100%;它就会继承body设定的字体大小。
+1. 它改变了默认的大小。
+2. 这些元素本身不会继承父体的字体大小，设置了font-size:100%后就能自动继承。 */
+
+p, dl, dd {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #474747;
+    display: block;
+}
+
+strong, b {
+    font-weight: normal;
+}
+
+em, i, th {
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 0;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: inherit;
+    background: none;
+}
+
+/* input:focus{outline:none;} */
+
+/* 不允许用户重置 */
+
+textarea {
+    resize: none;
+}
+
+img {
+    vertical-align: bottom;
+    border: none;
+}
+
+/* 基线对齐:vertical-align: bottom */
+
+/* 图片加链接后IE出现边框:border:none */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 清浮动:content:"";display: block;clear:both; */
+
+/* 内联元素(包括内联块)
+代码视图的折行或空格 引起间隙问题
+解决：
+父元素{font-size:0}
+隐患：后代元素需要重新定义字号 */

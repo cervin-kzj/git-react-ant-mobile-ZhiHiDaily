@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+// import './App.css';
+import { Switch, Route, Redirect } from "react-router-dom"
+import AsyncComponent from "./util/AsyncComponent"
+const IndexComponent = AsyncComponent(
+  () => {
+    return import('./pages/Index')
+  }
+)
+/**
+ * 箭头函数简写
+ */
+const DetailComponent = AsyncComponent(
+  () => import("./pages/Detail")
+)
+const CommentComponent = AsyncComponent(
+  () => import("./pages/Comment")
+)
+const CollectionComponent = AsyncComponent(
+  () => import("./pages/Collection")
+)
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrap">
+      <Switch>
+        <Route path="/index" component={IndexComponent}></Route>
+        <Route path="/detail/:id" component={DetailComponent}></Route>
+        <Route path="/comment/:id" component={CommentComponent}></Route>
+        <Route path="/collection" component={CollectionComponent}></Route>
+        <Redirect to="/index"></Redirect>
+      </Switch>
     </div>
   );
 }

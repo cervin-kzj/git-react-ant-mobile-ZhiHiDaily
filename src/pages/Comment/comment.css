@@ -1,0 +1,101 @@
+.NavBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.am-accordion {
+    border-top: none;
+}
+
+.am-accordion .am-accordion-item .am-accordion-header {
+    border: none;
+}
+
+html:not([data-scale]) .am-accordion .am-accordion-item .am-accordion-header::after, html:not([data-scale]) .am-accordion::before {
+    height: 0px;
+}
+
+.commentList>li {
+    position: relative;
+    display: flex;
+    min-height: 2.19rem;
+    border-bottom: 2px solid #eaeaea;
+    box-sizing: border-box;
+    padding: 30px 15px 15px;
+}
+
+.commentList>li:last-child {
+    border-bottom: none;
+}
+
+.boxL {
+    width: 0.81rem;
+}
+
+.boxR {
+    padding-left: 0.22rem;
+}
+
+.avatar {
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+}
+
+.nickname {
+    color: #0e0e0e;
+    font-weight: bolder;
+    height: 0.27rem;
+    line-height: 0.27rem;
+    font-size: 0.27rem;
+}
+
+.commentContent {
+    color: #020202;
+    line-height: 0.51rem;
+    font-size: 0.27rem;
+    margin: 0.09rem 0rem 0.36rem;
+}
+
+.addTime {
+    color: #bcbcbc;
+    font-size: 0.19rem;
+}
+
+.iconItem {
+    position: absolute;
+    bottom: 0.15rem;
+}
+
+.popoverItem {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.20rem;
+}
+
+.iconClass>svg {
+    width: 0.31rem;
+    height: 0.31rem;
+}
+
+.liuyan {
+    right: 0.20rem;
+}
+
+.dianzan {
+    right: 1.19rem;
+}
+
+.dianzan>i {
+    font-size: 0.19rem;
+    height: 0.31rem;
+    line-height: 0.31rem;
+    float: left;
+    margin-right: 10px;
+}
+
+.md {
+    margin-right: 9px;
+}
